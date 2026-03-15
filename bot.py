@@ -16,6 +16,7 @@ logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
 )
 logger = logging.getLogger(__name__)
+logging.getLogger("httpx").setLevel(logging.WARNING)
 
 # In-memory session management
 # user_sessions[user_id] = [{"role": "system", "content": "..."}, {"role": "user", "content": "..."}, ...]
